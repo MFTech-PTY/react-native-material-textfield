@@ -1,8 +1,8 @@
 {
   "name": "@mftechio/react-native-mftech-material-textfield",
-  "version": "0.16.4",
+  "version": "0.16.5",
   "license": "BSD-3-Clause",
-  "author": "Alexander Nazarov <n4kz@n4kz.com>",
+  "author": "Zinli",
   "description": "Material textfield",
   "keywords": [
     "react",
@@ -21,6 +21,7 @@
   "main": "index.js",
   "files": [
     "index.js",
+    "index.d.ts",
     "src/*",
     "license.txt",
     "readme.md",
@@ -31,7 +32,7 @@
     "url": "git@github.com:MFTech-PTY/react-native-material-textfield.git"
   },
   "dependencies": {
-    "prop-types": "^15.5.9"
+    "prop-types": "^15.8.1"
   },
   "peerDependencies": {
     "react": ">=16.3.0",
@@ -45,10 +46,10 @@
     "eslint": "^6.5.0",
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-native": "^3.7.0",
-    "jest": "^29.5.0",
+    "jest": "^24.9.0",
     "metro-react-native-babel-preset": "^0.56.0",
     "react": "16.10.2",
-    "react-native": "^0.71.6",
+    "react-native": "0.61.2",
     "react-test-renderer": "16.10.2"
   },
   "scripts": {

@@ -2,10 +2,10 @@
 [npm-url]: https://www.npmjs.com/package/@ubaids/react-native-material-textfield
 [license-badge]: https://img.shields.io/npm/l/react-native-material-textfield.svg?colorB=448aff
 [license-url]: https://github.com/ubaidjs/react-native-material-textfield/blob/master/license.txt
-[travis-badge]: https://api.travis-ci.org/n4kz/react-native-material-textfield.svg?branch=master
-[travis-url]: https://travis-ci.org/n4kz/react-native-material-textfield?branch=master
-[codeclimate-badge]: https://img.shields.io/codeclimate/maintainability/n4kz/react-native-material-textfield.svg
-[codeclimate-url]: https://codeclimate.com/github/n4kz/react-native-material-textfield
+[travis-badge]: https://api.travis-ci.org/@mftechio/react-native-material-textfield.svg?branch=master
+[travis-url]: https://travis-ci.org/@mftechio/react-native-material-textfield?branch=master
+[codeclimate-badge]: https://img.shields.io/codeclimate/maintainability/@mftechio/react-native-material-textfield.svg
+[codeclimate-url]: https://codeclimate.com/github/@mftechio/react-native-material-textfield
 [example-url]: https://cloud.githubusercontent.com/assets/2055622/24325711/eaa4ff08-11af-11e7-8550-2504c1580979.gif
 [rn-textinput]: https://facebook.github.io/react-native/docs/textinput.html#props
 [md-textfield]: https://material.io/guidelines/components/text-fields.html
