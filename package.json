@@ -41,9 +41,6 @@
     "url": "git@github.com:MFTech-PTY/react-native-material-textfield.git"
   },
   "homepage": "https://github.com/MFTech-PTY/react-native-material-textfield#readme",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
-  },
   "dependencies": {
     "prop-types": "^15.8.1"
   },
