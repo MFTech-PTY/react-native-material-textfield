@@ -23,9 +23,7 @@ export default class Counter extends PureComponent {
     }
 
     let textStyle = {
-      color: count > limit?
-        errorColor:
-        baseColor,
+      color: count > limit ? errorColor : baseColor,
     };
 
     return (

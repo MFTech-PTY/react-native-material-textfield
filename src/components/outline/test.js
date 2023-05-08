@@ -10,60 +10,51 @@ import Outline from '.';
 const props = {
   disabled: false,
   restricted: false,
-  
+
   baseColor: 'black',
   tintColor: 'blue',
   errorColor: 'red',
-  
+
   lineWidth: 0.5,
   activeLineWidth: 2,
   disabledLineWidth: 1,
-  
+
   focusAnimation: new Animated.Value(0),
   labelAnimation: new Animated.Value(0),
   labelWidth: new Animated.Value(72),
-  
+
   contentInset: {
     left: 12,
     right: 12,
   },
 };
 
-
 describe('outline', () => {
   it('renders outline', () => {
-    let line = renderer
-      .create(<Outline {...props} />)
-      .toJSON();
-    
-    expect(line)
-      .toMatchSnapshot();
+    let line = renderer.create(<Outline {...props} />).toJSON();
+
+    expect(line).toMatchSnapshot();
   });
-  
+
   it('renders disabled outline', () => {
-    let line = renderer
-      .create(<Outline {...props} disabled={true}/>)
-      .toJSON();
-    
-    expect(line)
-      .toMatchSnapshot();
+    let line = renderer.create(<Outline {...props} disabled={true} />).toJSON();
+
+    expect(line).toMatchSnapshot();
   });
-  
+
   it('renders restricted outline', () => {
     let line = renderer
-      .create(<Outline {...props} restricted={true}/>)
+      .create(<Outline {...props} restricted={true} />)
       .toJSON();
-    
-    expect(line)
-      .toMatchSnapshot();
+
+    expect(line).toMatchSnapshot();
   });
-  
+
   it('renders active outline', () => {
     let line = renderer
-      .create(<Outline {...props} labelAnimation={new Animated.Value(1)}/>)
+      .create(<Outline {...props} labelAnimation={new Animated.Value(1)} />)
       .toJSON();
-    
-    expect(line)
-      .toMatchSnapshot();
+
+    expect(line).toMatchSnapshot();
   });
-})
+});

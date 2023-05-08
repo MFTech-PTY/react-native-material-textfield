@@ -1,15 +1,15 @@
-import PropTypes from 'prop-types'
-import React, { PureComponent } from 'react'
-import { Animated } from 'react-native'
+import PropTypes from 'prop-types';
+import React, { PureComponent } from 'react';
+import { Animated } from 'react-native';
 
-import styles from './styles'
+import styles from './styles';
 
 export default class Label extends PureComponent {
   static defaultProps = {
     numberOfLines: 1,
     disabled: false,
     restricted: false,
-  }
+  };
 
   static propTypes = {
     numberOfLines: PropTypes.number,
@@ -41,7 +41,7 @@ export default class Label extends PureComponent {
 
     style: PropTypes.oneOfType([PropTypes.object, PropTypes.number]),
     label: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-  }
+  };
 
   render() {
     let {
@@ -59,37 +59,32 @@ export default class Label extends PureComponent {
       focusAnimation,
       labelAnimation,
       ...props
-    } = this.props
+    } = this.props;
 
-    if (null == label) {
-      return null
+    if (label == null) {
+      return null;
     }
 
     let color = disabled
       ? baseColor
       : restricted
-        ? errorColor
-        : focusAnimation.interpolate({
+      ? errorColor
+      : focusAnimation.interpolate({
           inputRange: [-1, 0, 1],
           outputRange: [errorColor, baseColor, tintColor],
-        })
+        });
 
     let textStyle = {
       lineHeight: fontSize,
       fontSize,
       color,
-    }
+    };
 
-    let {
-      x0,
-      y0,
-      x1,
-      y1,
-    } = offset
+    let { x0, y0, x1, y1 } = offset;
 
-    y0 += activeFontSize
-    y0 += contentInset.label
-    y0 += fontSize * 0.25
+    y0 += activeFontSize;
+    y0 += contentInset.label;
+    y0 += fontSize * 0.25;
 
     let containerStyle = {
       transform: [
@@ -112,7 +107,7 @@ export default class Label extends PureComponent {
           }),
         },
       ],
-    }
+    };
 
     return (
       <Animated.View style={[styles.container, containerStyle]}>
@@ -120,6 +115,6 @@ export default class Label extends PureComponent {
           {label}
         </Animated.Text>
       </Animated.View>
-    )
+    );
   }
 }

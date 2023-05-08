@@ -81,7 +81,7 @@ export default class Line extends PureComponent {
   render() {
     let { lineType, labelWidth, labelAnimation, contentInset } = this.props;
 
-    if ('none' === lineType) {
+    if (lineType === 'none') {
       return null;
     }
 
@@ -89,11 +89,14 @@ export default class Line extends PureComponent {
     let lineOffset = Animated.add(labelWidth, labelOffset);
 
     let topLineContainerStyle = {
-      transform: [{
-        scaleX: I18nManager.isRTL? -1 : 1,
-      }, {
-        translateX: Animated.multiply(labelAnimation, lineOffset),
-      }],
+      transform: [
+        {
+          scaleX: I18nManager.isRTL ? -1 : 1,
+        },
+        {
+          translateX: Animated.multiply(labelAnimation, lineOffset),
+        },
+      ],
     };
 
     let leftContainerStyle = {
@@ -113,21 +116,32 @@ export default class Line extends PureComponent {
 
     return (
       <Fragment>
-        <View style={[styles.topContainer, topContainerStyle]} pointerEvents='none'>
-          <Animated.View style={[styles.topLineContainer, topLineContainerStyle]}>
+        <View
+          style={[styles.topContainer, topContainerStyle]}
+          pointerEvents="none"
+        >
+          <Animated.View
+            style={[styles.topLineContainer, topLineContainerStyle]}
+          >
             <Animated.View style={[styles.borderTop, lineStyle]} />
           </Animated.View>
         </View>
 
-        <View style={[styles.rightContainer, rightContainerStyle]} pointerEvents='none'>
+        <View
+          style={[styles.rightContainer, rightContainerStyle]}
+          pointerEvents="none"
+        >
           <Animated.View style={[styles.borderRight, lineStyle]} />
         </View>
 
-        <View style={styles.bottomContainer} pointerEvents='none'>
+        <View style={styles.bottomContainer} pointerEvents="none">
           <Animated.View style={[styles.borderBottom, lineStyle]} />
         </View>
 
-        <View style={[styles.leftContainer, leftContainerStyle]} pointerEvents='none'>
+        <View
+          style={[styles.leftContainer, leftContainerStyle]}
+          pointerEvents="none"
+        >
           <Animated.View style={[styles.borderLeft, lineStyle]} />
         </View>
       </Fragment>

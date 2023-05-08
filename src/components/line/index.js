@@ -4,8 +4,7 @@ import { View, Animated } from 'react-native';
 
 import styles from './styles';
 
-const lineTypes = PropTypes
-  .oneOf(['solid', 'dotted', 'dashed', 'none']);
+const lineTypes = PropTypes.oneOf(['solid', 'dotted', 'dashed', 'none']);
 
 export default class Line extends PureComponent {
   static defaultProps = {
@@ -41,7 +40,7 @@ export default class Line extends PureComponent {
       lineWidth,
       activeLineWidth,
       disabledLineWidth,
-      1,
+      1
     );
 
     if (maxLineWidth !== state.maxLineWidth) {
@@ -97,16 +96,16 @@ export default class Line extends PureComponent {
     let { maxLineWidth } = this.state;
     let { disabled, lineType, disabledLineType } = this.props;
 
-    let borderStyle = disabled?
-      disabledLineType:
-      lineType;
+    let borderStyle = disabled ? disabledLineType : lineType;
 
-    if ('none' === borderStyle) {
+    if (borderStyle === 'none') {
       return null;
     }
 
-    let [top, right, left] = Array
-      .from(new Array(3), () => -1.5 * maxLineWidth);
+    let [top, right, left] = Array.from(
+      new Array(3),
+      () => -1.5 * maxLineWidth
+    );
 
     let lineStyle = {
       ...this.borderProps(),
@@ -118,7 +117,7 @@ export default class Line extends PureComponent {
     };
 
     return (
-      <View style={styles.container} pointerEvents='none'>
+      <View style={styles.container} pointerEvents="none">
         <Animated.View style={[styles.line, lineStyle]} />
       </View>
     );

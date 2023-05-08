@@ -1,4 +1,4 @@
-import { StyleSheet, Platform } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 
 export const borderRadius = 4;
 
@@ -63,7 +63,7 @@ export default StyleSheet.create({
   bottomContainer: {
     ...containerStyle,
 
-    top: borderRadius - ('android' === Platform.OS? 0.25 : 0),
+    top: borderRadius - (Platform.OS === 'android' ? 0.25 : 0),
     left: 0,
     right: 0,
     bottom: 0,

@@ -28,56 +28,6 @@ exports[`counter renders when limit is exceeded 1`] = `
 exports[`counter renders when limit is set 1`] = `
 <Text
   style={
-    [
-      {
-        "backgroundColor": "transparent",
-        "fontSize": 12,
-        "lineHeight": 16,
-        "marginLeft": 8,
-        "paddingVertical": 2,
-        "textAlign": "right",
-      },
-      undefined,
-      {
-        "color": "blue",
-      },
-    ]
-  }
->
-  1
-   / 
-  1
-</Text>
-`;
-
-exports[`renders when limit is exceeded 1`] = `
-<Text
-  style={
-    Array [
-      Object {
-        "backgroundColor": "transparent",
-        "fontSize": 12,
-        "lineHeight": 16,
-        "marginLeft": 8,
-        "paddingVertical": 2,
-        "textAlign": "right",
-      },
-      undefined,
-      Object {
-        "color": "red",
-      },
-    ]
-  }
->
-  2
-   / 
-  1
-</Text>
-`;
-
-exports[`renders when limit is set 1`] = `
-<Text
-  style={
     Array [
       Object {
         "backgroundColor": "transparent",

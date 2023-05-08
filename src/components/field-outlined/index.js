@@ -37,10 +37,7 @@ export default class OutlinedTextField extends TextField {
   }
 
   onTextLayout({ nativeEvent: { lines } }) {
-    let {
-      fontSize,
-      labelFontSize,
-    } = this.props;
+    let { fontSize, labelFontSize } = this.props;
     let { labelWidth } = this.state;
 
     let scale = labelFontSize / fontSize;
@@ -60,8 +57,6 @@ export default class OutlinedTextField extends TextField {
   renderLine(props) {
     let { labelWidth } = this.state;
 
-    return (
-      <Outline {...props} labelWidth={labelWidth}/>
-    );
+    return <Outline {...props} labelWidth={labelWidth} />;
   }
 }
