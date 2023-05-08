@@ -17,46 +17,52 @@ const props = {
 const prefix = 'a';
 const suffix = 'z';
 
-it('renders prefix', () => {
-  let affix = renderer
-    .create(<Affix type='prefix' {...props}>{prefix}</Affix>)
-    .toJSON();
+describe('affix', () => {
+  it('renders prefix', () => {
+    let affix = renderer
+      .create(
+        <Affix type="prefix" {...props}>
+          {prefix}
+        </Affix>
+      )
+      .toJSON();
 
-  expect(affix)
-    .toMatchSnapshot();
-});
+    expect(affix).toMatchSnapshot();
+  });
 
-it('renders inactive prefix', () => {
-  let affix = renderer
-    .create(
-      <Affix type='prefix' {...props} labelAnimation={new Animated.Value(0)}>
-        {prefix}
-      </Affix>
-    )
-    .toJSON();
+  it('renders inactive prefix', () => {
+    let affix = renderer
+      .create(
+        <Affix type="prefix" {...props} labelAnimation={new Animated.Value(0)}>
+          {prefix}
+        </Affix>
+      )
+      .toJSON();
 
-  expect(affix)
-    .toMatchSnapshot();
-});
+    expect(affix).toMatchSnapshot();
+  });
 
-it('renders suffix', () => {
-  let affix = renderer
-    .create(<Affix type='suffix' {...props}>{suffix}</Affix>)
-    .toJSON();
+  it('renders suffix', () => {
+    let affix = renderer
+      .create(
+        <Affix type="suffix" {...props}>
+          {suffix}
+        </Affix>
+      )
+      .toJSON();
 
-  expect(affix)
-    .toMatchSnapshot();
-});
+    expect(affix).toMatchSnapshot();
+  });
 
-it('renders inactive suffix', () => {
-  let affix = renderer
-    .create(
-      <Affix type='suffix' {...props} labelAnimation={new Animated.Value(0)}>
-        {suffix}
-      </Affix>
-    )
-    .toJSON();
+  it('renders inactive suffix', () => {
+    let affix = renderer
+      .create(
+        <Affix type="suffix" {...props} labelAnimation={new Animated.Value(0)}>
+          {suffix}
+        </Affix>
+      )
+      .toJSON();
 
-  expect(affix)
-    .toMatchSnapshot();
+    expect(affix).toMatchSnapshot();
+  });
 });

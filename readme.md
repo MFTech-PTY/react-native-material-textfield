@@ -169,4 +169,4 @@ npm run ios # or npm run android
 
 BSD License
 
-Copyright 2017-2019 Alexander Nazarov. All rights reserved.
+Copyright 2023 MFTech <tech@mftech.io> (https://zinli.com). All rights reserved.

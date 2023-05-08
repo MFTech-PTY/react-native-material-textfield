@@ -1,5 +1,55 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`counter renders when limit is exceeded 1`] = `
+<Text
+  style={
+    [
+      {
+        "backgroundColor": "transparent",
+        "fontSize": 12,
+        "lineHeight": 16,
+        "marginLeft": 8,
+        "paddingVertical": 2,
+        "textAlign": "right",
+      },
+      undefined,
+      {
+        "color": "red",
+      },
+    ]
+  }
+>
+  2
+   / 
+  1
+</Text>
+`;
+
+exports[`counter renders when limit is set 1`] = `
+<Text
+  style={
+    [
+      {
+        "backgroundColor": "transparent",
+        "fontSize": 12,
+        "lineHeight": 16,
+        "marginLeft": 8,
+        "paddingVertical": 2,
+        "textAlign": "right",
+      },
+      undefined,
+      {
+        "color": "blue",
+      },
+    ]
+  }
+>
+  1
+   / 
+  1
+</Text>
+`;
+
 exports[`renders when limit is exceeded 1`] = `
 <Text
   style={

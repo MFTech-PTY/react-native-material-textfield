@@ -10,50 +10,52 @@ import Line from '.';
 const props = {
   disabled: false,
   restricted: false,
-
+  
   baseColor: 'black',
   tintColor: 'blue',
   errorColor: 'red',
-
+  
   lineWidth: 0.5,
   activeLineWidth: 2,
   disabledLineWidth: 1,
-
+  
   focusAnimation: new Animated.Value(0),
 };
 
-it('renders line', () => {
-  let line = renderer
-    .create(<Line {...props} />)
-    .toJSON();
-
-  expect(line)
-    .toMatchSnapshot();
-});
-
-it('renders disabled line', () => {
-  let line = renderer
-    .create(<Line {...props} disabled={true} />)
-    .toJSON();
-
-  expect(line)
-    .toMatchSnapshot();
-});
-
-it('renders restricted line', () => {
-  let line = renderer
-    .create(<Line {...props} restricted={true} />)
-    .toJSON();
-
-  expect(line)
-    .toMatchSnapshot();
-});
-
-it('renders active line', () => {
-  let line = renderer
-    .create(<Line {...props} focusAnimation={new Animated.Value(1)} />)
-    .toJSON();
-
-  expect(line)
-    .toMatchSnapshot();
-});
+describe('line', () => {
+  it('renders line', () => {
+    let line = renderer
+      .create(<Line {...props} />)
+      .toJSON();
+    
+    expect(line)
+      .toMatchSnapshot();
+  });
+  
+  it('renders disabled line', () => {
+    let line = renderer
+      .create(<Line {...props} disabled={true}/>)
+      .toJSON();
+    
+    expect(line)
+      .toMatchSnapshot();
+  });
+  
+  it('renders restricted line', () => {
+    let line = renderer
+      .create(<Line {...props} restricted={true}/>)
+      .toJSON();
+    
+    expect(line)
+      .toMatchSnapshot();
+  });
+  
+  it('renders active line', () => {
+    let line = renderer
+      .create(<Line {...props} focusAnimation={new Animated.Value(1)}/>)
+      .toJSON();
+    
+    expect(line)
+      .toMatchSnapshot();
+  });
+})

@@ -80,7 +80,12 @@ export default class Label extends PureComponent {
       color,
     }
 
-    let { x0, y0, x1, y1 } = offset
+    let {
+      x0,
+      y0,
+      x1,
+      y1,
+    } = offset
 
     y0 += activeFontSize
     y0 += contentInset.label
