@@ -74,11 +74,10 @@ export default class Label extends PureComponent {
           outputRange: [errorColor, baseColor, tintColor],
         });
 
-    let textStyle = {
-      lineHeight: fontSize,
-      fontSize,
-      color,
-    };
+    const animatedFontSize = labelAnimation.interpolate({
+      inputRange: [0, 1],
+      outputRange: [fontSize, activeFontSize],
+    });
 
     let { x0, y0, x1, y1 } = offset;
 
@@ -86,27 +85,19 @@ export default class Label extends PureComponent {
     y0 += contentInset.label;
     y0 += fontSize * 0.25;
 
+    const translateY = labelAnimation.interpolate({
+      inputRange: [0, 1],
+      outputRange: [y0, y1],
+    });
+
+    const textStyle = {
+      lineHeight: fontSize,
+      color,
+      fontSize: animatedFontSize,
+    };
+
     let containerStyle = {
-      transform: [
-        {
-          scale: labelAnimation.interpolate({
-            inputRange: [0, 1],
-            outputRange: [1, activeFontSize / fontSize],
-          }),
-        },
-        {
-          translateY: labelAnimation.interpolate({
-            inputRange: [0, 1],
-            outputRange: [y0, y1],
-          }),
-        },
-        {
-          translateX: labelAnimation.interpolate({
-            inputRange: [0, 1],
-            outputRange: [x0, x1],
-          }),
-        },
-      ],
+      transform: [{ translateY }],
     };
 
     return (
